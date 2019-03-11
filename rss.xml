@@ -1,2 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>NickAmaral.com</title><link>http://nickamaral.com/</link><description>NickAmaral.com</description><atom:link href="http://nickamaral.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2019 &lt;a href="mailto:nicholas.amaral@gmail.com"&gt;Nick Amaral&lt;/a&gt; </copyright><lastBuildDate>Mon, 11 Mar 2019 02:03:21 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>About</title><link>http://nickamaral.com/posts/about/</link><dc:creator>Nick Amaral</dc:creator><description>&lt;p&gt;Write your post here.&lt;/p&gt;</description><guid>http://nickamaral.com/posts/about/</guid><pubDate>Mon, 11 Mar 2019 01:34:00 GMT</pubDate></item></channel></rss>
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>NickAmaral.com</title><link>http://nickamaral.com/</link><description>NickAmaral.com</description><atom:link href="http://nickamaral.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2019 &lt;a href="mailto:nicholas.amaral@gmail.com"&gt;Nick Amaral&lt;/a&gt; </copyright><lastBuildDate>Mon, 11 Mar 2019 02:11:23 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Personal Data Backup Strategy</title><link>http://nickamaral.com/posts/personal-data-backup-strategy/</link><dc:creator>Nick Amaral</dc:creator><description>&lt;div class="section" id="backup-research-for-post"&gt;
+&lt;h2&gt;Backup Research for Post&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Last Updated:&lt;/strong&gt; March 10, 2019&lt;/p&gt;
+&lt;div class="section" id="overview"&gt;
+&lt;h3&gt;Overview&lt;/h3&gt;
+&lt;p&gt;This guide is a place for me to document my current backup process for data&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="irreplaceable-data"&gt;
+&lt;h3&gt;Irreplaceable Data&lt;/h3&gt;
+&lt;p&gt;Irreplaceable Data will have its main folder on my Windows Server,
+with a one for one backup to another physical drive in the same server,
+an offsite backup at a family members 10 miles away, and a cloud backup
+to Google Drive.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Code - All code will be created primarily on Windows within my OneDrive folder.  OneDrive will be synched across my devices and the cloud.  This will also be backedup with all other irreplaceable data according to my 1,2,3 policy.&lt;/li&gt;
+&lt;li&gt;Photos -&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="tools"&gt;
+&lt;h3&gt;Tools&lt;/h3&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;FreeFileSync: &lt;a class="reference external" href="https://freefilesync.org/"&gt;https://freefilesync.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Veeam Endpoint for Windows: &lt;a class="reference external" href="https://www.veeam.com/windows-endpoint-server-backup-free.html"&gt;https://www.veeam.com/windows-endpoint-server-backup-free.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Amazon Cloud Drive (Photos): &lt;a class="reference external" href="https://www.amazon.com/gp/drive/about"&gt;https://www.amazon.com/gp/drive/about&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description><guid>http://nickamaral.com/posts/personal-data-backup-strategy/</guid><pubDate>Mon, 11 Mar 2019 02:11:05 GMT</pubDate></item><item><title>Guide to setting up my Windows Subsystem for Linux Environment</title><link>http://nickamaral.com/posts/guide-to-setting-up-my-windows-subsystem-for-linux-environment/</link><dc:creator>Nick Amaral</dc:creator><description>&lt;div class="section" id="guide-to-setting-up-my-windows-subsystem-for-linux-environment"&gt;
+&lt;h2&gt;Guide to setting up my Windows Subsystem for Linux Environment&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Last Updated:&lt;/strong&gt; March 10, 2019&lt;/p&gt;
+&lt;div class="section" id="overview"&gt;
+&lt;h3&gt;Overview&lt;/h3&gt;
+&lt;p&gt;In this guide, I will document my process to setup a fresh Windows 10 OS with the Windows Subsystem for Linux.
+I will be using Ubuntu as the Linux OS, installed from the app store.  I will be doing my development in Visual Studio Code.
+Also, as part of this guide, I will setup my GitHub account with SSH key.  I reviewed a few guides, but I know this &lt;a class="reference external" href="https://daverupert.com/2018/04/developing-on-windows-with-wsl-and-visual-studio-code/"&gt;post&lt;/a&gt; by Dave was
+my go to.  Also, &lt;a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10"&gt;these instructions from Microsoft are useful&lt;/a&gt;.&lt;/p&gt;
+&lt;img alt="/images/wsl_ubuntu_sm.png" src="http://nickamaral.com/images/wsl_ubuntu_sm.png"&gt;
+&lt;/div&gt;
+&lt;div class="section" id="enable-windows-windowsoptionalfeature"&gt;
+&lt;h3&gt;Enable Windows WindowsOptionalFeature&lt;/h3&gt;
+&lt;p&gt;One important dependency is that you are running a more recent windows build, build 16215 or later.  Once you have verified the build,
+open PowerShell as Administrator and run the following:&lt;/p&gt;
+&lt;pre class="code PowerShell"&gt;&lt;a name="rest_code_a3c8fc105de8499591aac627a5511348-1"&gt;&lt;/a&gt;&lt;span class="nb"&gt;Enable-WindowsOptionalFeature&lt;/span&gt; &lt;span class="n"&gt;-Online&lt;/span&gt; &lt;span class="n"&gt;-FeatureName&lt;/span&gt; &lt;span class="n"&gt;Microsoft-Windows-Subsystem-Linux&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="section" id="install-ubuntu-from-the-windows-store"&gt;
+&lt;h3&gt;Install Ubuntu from the Windows store&lt;/h3&gt;
+&lt;p&gt;-Nick&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description><guid>http://nickamaral.com/posts/guide-to-setting-up-my-windows-subsystem-for-linux-environment/</guid><pubDate>Mon, 11 Mar 2019 02:10:12 GMT</pubDate></item><item><title>Guide to setting up Nikola with Bootswatch Lumen</title><link>http://nickamaral.com/posts/guide-to-setting-up-nikola-with-bootswatch-lumen/</link><dc:creator>Nick Amaral</dc:creator><description>&lt;div class="section" id="guide-to-setting-up-nikola-with-bootswatch-lumen"&gt;
+&lt;h2&gt;Guide to setting up Nikola with Bootswatch Lumen&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Last Updated:&lt;/strong&gt; June 10, 2018&lt;/p&gt;
+&lt;div class="section" id="overview"&gt;
+&lt;h3&gt;Overview&lt;/h3&gt;
+&lt;p&gt;This guide is a place for me to document the process I have
+gone through to use Nikola, Bootswatch, Github Pages and
+Google Domains to generate and host a static blog on &lt;a class="reference external" href="http://nickamaral.com"&gt;nickamaral.com&lt;/a&gt;.&lt;/p&gt;
+&lt;img alt="/images/getnikola.png" src="http://nickamaral.com/images/getnikola.png"&gt;
+&lt;p&gt;I am writing this guide from my Dell XPS 13 9360 running Windows 10.
+I've installed the Windows Subsystem for Linux, Ubuntu, and Visual Studio Code, after which I installed Python 3.6, vitualenv and some other dependencies.
+I will document the process I went through to get WSL working in my next post.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="update-with-python-now-being-in-windows-store"&gt;
+&lt;h3&gt;Update with Python now being in Windows store&lt;/h3&gt;
+&lt;p&gt;Trying to get this going using Python 3.7 from the Windows store.  After installing Python 3.7 from the Windows Store.&lt;/p&gt;
+&lt;pre class="code python"&gt;&lt;a name="rest_code_0e730ae1368e44e2a3e3de0ed9dbc0ff-1"&gt;&lt;/a&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt; &lt;span class="n"&gt;nickamaral&lt;/span&gt;
+&lt;a name="rest_code_0e730ae1368e44e2a3e3de0ed9dbc0ff-2"&gt;&lt;/a&gt;&lt;span class="n"&gt;nickamaral&lt;/span&gt;\&lt;span class="n"&gt;scripts&lt;/span&gt;\&lt;span class="n"&gt;activate&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;bat&lt;/span&gt;
+&lt;a name="rest_code_0e730ae1368e44e2a3e3de0ed9dbc0ff-3"&gt;&lt;/a&gt;&lt;span class="n"&gt;pip3&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;upgrade&lt;/span&gt; &lt;span class="n"&gt;pip&lt;/span&gt;
+&lt;a name="rest_code_0e730ae1368e44e2a3e3de0ed9dbc0ff-4"&gt;&lt;/a&gt;&lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;upgrade&lt;/span&gt; &lt;span class="s2"&gt;"Nikola[extras]"&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="section" id="installing-nikola"&gt;
+&lt;h3&gt;Installing Nikola&lt;/h3&gt;
+&lt;p&gt;This was my first project on my fresh WSL/Ubuntu setup so I needed to setup a virtualenv and virtualenvwrapper process to support my project workflow.
+I was using a great &lt;a class="reference external" href="https://blog.smallsec.ca/2017/09/07/installing-python3-6-on-wsl/"&gt;guide&lt;/a&gt;. from Liam at smallsec.  What I learned the most from the guide was the edits suggested for ~./bashrc&lt;/p&gt;
+&lt;p&gt;Here is the code I ran to install python and virtualenv / virtualenvwrapper.&lt;/p&gt;
+&lt;pre class="code python"&gt;&lt;a name="rest_code_a9aa4784915247ecb04d9f352587a93f-1"&gt;&lt;/a&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;apt&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;repository&lt;/span&gt; &lt;span class="n"&gt;ppa&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;jonathonf&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;3.6&lt;/span&gt;
+&lt;a name="rest_code_a9aa4784915247ecb04d9f352587a93f-2"&gt;&lt;/a&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt; &lt;span class="n"&gt;update&lt;/span&gt;
+&lt;a name="rest_code_a9aa4784915247ecb04d9f352587a93f-3"&gt;&lt;/a&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;apt&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;python3&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt; &lt;span class="n"&gt;python3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;pip&lt;/span&gt;
+&lt;a name="rest_code_a9aa4784915247ecb04d9f352587a93f-4"&gt;&lt;/a&gt;
+&lt;a name="rest_code_a9aa4784915247ecb04d9f352587a93f-5"&gt;&lt;/a&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;update&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;alternatives&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nb"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;python3&lt;/span&gt; &lt;span class="n"&gt;python3&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nb"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;python3&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;a name="rest_code_a9aa4784915247ecb04d9f352587a93f-6"&gt;&lt;/a&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;update&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;alternatives&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nb"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;python3&lt;/span&gt; &lt;span class="n"&gt;python3&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nb"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;python3&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;a name="rest_code_a9aa4784915247ecb04d9f352587a93f-7"&gt;&lt;/a&gt;
+&lt;a name="rest_code_a9aa4784915247ecb04d9f352587a93f-8"&gt;&lt;/a&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt; &lt;span class="n"&gt;pip3&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;upgrade&lt;/span&gt; &lt;span class="n"&gt;pip&lt;/span&gt;
+&lt;a name="rest_code_a9aa4784915247ecb04d9f352587a93f-9"&gt;&lt;/a&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;H&lt;/span&gt; &lt;span class="n"&gt;pip3&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;virtualenv&lt;/span&gt; &lt;span class="n"&gt;virtualenvwrapper&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;Edit your ~./bashrc.  In the below, nicho is my user folder in Windows and /mnt/c is specific to how WSL interacts with the Windows file system.
+These edits enable a lot of the magic in using virtualenv, via workon 'project name', especially on my WSL environment.&lt;/p&gt;
+&lt;pre class="code python"&gt;&lt;a name="rest_code_8ed4c8979edd40b9a365d6350e25ebb5-1"&gt;&lt;/a&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;nano&lt;/span&gt; &lt;span class="o"&gt;~./&lt;/span&gt;&lt;span class="n"&gt;bashrc&lt;/span&gt;
+&lt;a name="rest_code_8ed4c8979edd40b9a365d6350e25ebb5-2"&gt;&lt;/a&gt;
+&lt;a name="rest_code_8ed4c8979edd40b9a365d6350e25ebb5-3"&gt;&lt;/a&gt;&lt;span class="n"&gt;export&lt;/span&gt; &lt;span class="n"&gt;WORKON_HOME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="n"&gt;HOME&lt;/span&gt;&lt;span class="o"&gt;/.&lt;/span&gt;&lt;span class="n"&gt;virtualenvs&lt;/span&gt;
+&lt;a name="rest_code_8ed4c8979edd40b9a365d6350e25ebb5-4"&gt;&lt;/a&gt;&lt;span class="n"&gt;export&lt;/span&gt; &lt;span class="n"&gt;PROJECT_HOME&lt;/span&gt;&lt;span class="o"&gt;=/&lt;/span&gt;&lt;span class="n"&gt;mnt&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Users&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;nicho&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;Code&lt;/span&gt;
+&lt;a name="rest_code_8ed4c8979edd40b9a365d6350e25ebb5-5"&gt;&lt;/a&gt;&lt;span class="n"&gt;export&lt;/span&gt; &lt;span class="n"&gt;VIRTUALENVWRAPPER_PYTHON&lt;/span&gt;&lt;span class="o"&gt;=/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nb"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;python3&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;
+&lt;a name="rest_code_8ed4c8979edd40b9a365d6350e25ebb5-6"&gt;&lt;/a&gt;&lt;span class="n"&gt;source&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nb"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;virtualenvwrapper&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sh&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;Next I needed to create my viritualenv for Nikola.   First create and navigate to the root of the project folder where you want to create the new viritualenv.&lt;/p&gt;
+&lt;pre class="code python"&gt;&lt;a name="rest_code_50fea061cff34ac9b4c75054a6c1fdad-1"&gt;&lt;/a&gt;&lt;span class="n"&gt;mkdir&lt;/span&gt; &lt;span class="n"&gt;newproject&lt;/span&gt;
+&lt;a name="rest_code_50fea061cff34ac9b4c75054a6c1fdad-2"&gt;&lt;/a&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;newproject&lt;/span&gt;
+&lt;a name="rest_code_50fea061cff34ac9b4c75054a6c1fdad-3"&gt;&lt;/a&gt;&lt;span class="n"&gt;mkvirtualenv&lt;/span&gt; &lt;span class="n"&gt;newproject&lt;/span&gt;
+&lt;a name="rest_code_50fea061cff34ac9b4c75054a6c1fdad-4"&gt;&lt;/a&gt;&lt;span class="n"&gt;workon&lt;/span&gt; &lt;span class="n"&gt;newproject&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;Once the new project is activated you can install nikola.  This step has a lot of dependencies so it will take a bit.&lt;/p&gt;
+&lt;pre class="code python"&gt;&lt;a name="rest_code_16cd5bbe742c45378329b3e8593d76a8-1"&gt;&lt;/a&gt;&lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;upgrade&lt;/span&gt; &lt;span class="s2"&gt;"Nikola[extras]"&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;From here I followed the &lt;a class="reference external" href="https://getnikola.com/getting-started.html"&gt;Nikola - Getting Started&lt;/a&gt; instructions. to setup a new nikola site in my project directory.  These steps could change, so I will just refer back to their guide.&lt;/p&gt;
+&lt;p&gt;Once the basic site was setup, I wanted to change the default template to &lt;a class="reference external" href="https://bootswatch.com/lumen/"&gt;Bootswatch Lumen&lt;/a&gt;.  I ended up following this &lt;a class="reference external" href="https://necromuralist.github.io/posts/how-to-change-the-nikola-bootswatch-theme/"&gt;post&lt;/a&gt; to learn the steps involved in changing the basic template from bootstrap3.&lt;/p&gt;
+&lt;p&gt;Here are the steps to get the theme up and going:&lt;/p&gt;
+&lt;pre class="code python"&gt;&lt;a name="rest_code_8d943b0e124341f9825c9a1b7ca4194d-1"&gt;&lt;/a&gt;&lt;span class="n"&gt;nikola&lt;/span&gt; &lt;span class="n"&gt;install_theme&lt;/span&gt; &lt;span class="n"&gt;bootstrap3&lt;/span&gt;
+&lt;a name="rest_code_8d943b0e124341f9825c9a1b7ca4194d-2"&gt;&lt;/a&gt;&lt;span class="n"&gt;nikola&lt;/span&gt; &lt;span class="n"&gt;bootswatch_theme&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;lumen&lt;/span&gt;
+&lt;a name="rest_code_8d943b0e124341f9825c9a1b7ca4194d-3"&gt;&lt;/a&gt;&lt;span class="n"&gt;nikola&lt;/span&gt; &lt;span class="n"&gt;build&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;Ultimately, I wanted to host this site on github user pages.  Nikola has a great deploy process that integrates perfectly with github.
+I will write a separate post to explain the steps involved in setting up my github with ssh on WSL.  &lt;a class="reference external" href="https://getnikola.com/handbook.html#deploying-to-github"&gt;Deploying to github&lt;/a&gt; is very simple.&lt;/p&gt;
+&lt;pre class="code python"&gt;&lt;a name="rest_code_01deeaaa967a4e74b4eace170c1c33ca-1"&gt;&lt;/a&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;init&lt;/span&gt;
+&lt;a name="rest_code_01deeaaa967a4e74b4eace170c1c33ca-2"&gt;&lt;/a&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;remote&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="nd"&gt;@github.com&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;repository&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;Edit the conf.py for the following settings:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;GITHUB_DEPLOY_BRANCH is the branch where Nikola-generated HTML files will be deployed. It should be gh-pages for project pages and master for user pages (user.github.io).&lt;/li&gt;
+&lt;li&gt;GITHUB_SOURCE_BRANCH is the branch where your Nikola site source will be deployed. We recommend and default to src.&lt;/li&gt;
+&lt;li&gt;GITHUB_REMOTE_NAME is the remote to which changes are pushed.&lt;/li&gt;
+&lt;li&gt;GITHUB_COMMIT_SOURCE controls whether or not the source branch is automatically committed to and pushed. We recommend setting it to True, unless you are automating builds with Travis CI.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Create a .gitignore file. We recommend adding at least the following entries:&lt;/p&gt;
+&lt;pre class="code python"&gt;&lt;a name="rest_code_e85d88107d534d3b9814b4cb482e78bd-1"&gt;&lt;/a&gt;&lt;span class="n"&gt;cache&lt;/span&gt;
+&lt;a name="rest_code_e85d88107d534d3b9814b4cb482e78bd-2"&gt;&lt;/a&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;doit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;db&lt;/span&gt;
+&lt;a name="rest_code_e85d88107d534d3b9814b4cb482e78bd-3"&gt;&lt;/a&gt;&lt;span class="n"&gt;__pycache__&lt;/span&gt;
+&lt;a name="rest_code_e85d88107d534d3b9814b4cb482e78bd-4"&gt;&lt;/a&gt;&lt;span class="n"&gt;output&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;Run nikola github_deploy. This will build the site, commit the output folder to your deploy branch, and push to GitHub.
+In my case, the master branch contained my output.  I next needed to setup CNAME on Google Domains and my static files.
+The CNAME file needs to be added to the nikola files directory.  This will make sure it is uploaded to the output folder during deployment.
+In my case, the cname file contained the following:&lt;/p&gt;
+&lt;pre class="code python"&gt;&lt;a name="rest_code_73255dd5f1ab46ddac7e966cd58776af-1"&gt;&lt;/a&gt;&lt;span class="n"&gt;nickamaral&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;
+&lt;a name="rest_code_73255dd5f1ab46ddac7e966cd58776af-2"&gt;&lt;/a&gt;&lt;span class="n"&gt;www&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;nickamaral&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;And on Google Domains, I logged in, navigated to manage domains and clicked Configure DNS entry for the domain.  The entries I needed to add where the following:&lt;/p&gt;
+&lt;pre class="code python"&gt;&lt;a name="rest_code_6c0cd20cca684e76b21f75a1edb1c55f-1"&gt;&lt;/a&gt;&lt;span class="err"&gt;@&lt;/span&gt; &lt;span class="n"&gt;A&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;h&lt;/span&gt; &lt;span class="mf"&gt;192.30&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;252.153&lt;/span&gt;
+&lt;a name="rest_code_6c0cd20cca684e76b21f75a1edb1c55f-2"&gt;&lt;/a&gt;&lt;span class="err"&gt;@&lt;/span&gt; &lt;span class="n"&gt;A&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;h&lt;/span&gt; &lt;span class="mf"&gt;192.30&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;25&lt;/span&gt;
+&lt;a name="rest_code_6c0cd20cca684e76b21f75a1edb1c55f-3"&gt;&lt;/a&gt;&lt;span class="n"&gt;www&lt;/span&gt; &lt;span class="n"&gt;CNAME&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="n"&gt;h&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;nickja&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;And finally, in order to start a new post on the site:&lt;/p&gt;
+&lt;pre class="code python"&gt;&lt;a name="rest_code_44fe63671e57467b964821eb3116453a-1"&gt;&lt;/a&gt;&lt;span class="n"&gt;nikola&lt;/span&gt; &lt;span class="n"&gt;new_post&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;I will keep this post updated if I make any changes.&lt;/p&gt;
+&lt;p&gt;-Nick&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description><guid>http://nickamaral.com/posts/guide-to-setting-up-nikola-with-bootswatch-lumen/</guid><pubDate>Mon, 11 Mar 2019 02:09:29 GMT</pubDate></item><item><title>About</title><link>http://nickamaral.com/posts/about/</link><dc:creator>Nick Amaral</dc:creator><description>&lt;p&gt;Write your post here.&lt;/p&gt;</description><guid>http://nickamaral.com/posts/about/</guid><pubDate>Mon, 11 Mar 2019 01:34:00 GMT</pubDate></item></channel></rss>
