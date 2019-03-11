@@ -1,0 +1,4 @@
+Sitemap: http://nickamaral.com/sitemapindex.xml
+
+User-Agent: *
+Host: nickamaral.com
