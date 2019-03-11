@@ -68,3 +68,4 @@
 'render_pages:output\\posts\\guide-to-setting-up-my-windows-subsystem-for-linux-environment\\index.html', (88064, 5918)
 'render_sources:output\\posts\\personal-data-backup-strategy\\index.rst', (94208, 287)
 'render_pages:output\\posts\\personal-data-backup-strategy\\index.html', (98304, 5753)
+'copy_files:output\\CNAME', (106496, 231)
