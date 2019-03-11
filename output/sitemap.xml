@@ -15,7 +15,7 @@
  </url>
  <url>
   <loc>http://nickamaral.com/archive.html</loc>
-  <lastmod>2019-03-11T02:03:00Z</lastmod>
+  <lastmod>2019-03-11T02:11:00Z</lastmod>
  </url>
  <url>
   <loc>http://nickamaral.com/categories/</loc>
@@ -24,5 +24,17 @@
  <url>
   <loc>http://nickamaral.com/posts/about/</loc>
   <lastmod>2019-03-11T02:03:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://nickamaral.com/posts/guide-to-setting-up-my-windows-subsystem-for-linux-environment/</loc>
+  <lastmod>2019-03-11T02:11:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://nickamaral.com/posts/guide-to-setting-up-nikola-with-bootswatch-lumen/</loc>
+  <lastmod>2019-03-11T02:11:00Z</lastmod>
+ </url>
+ <url>
+  <loc>http://nickamaral.com/posts/personal-data-backup-strategy/</loc>
+  <lastmod>2019-03-11T02:11:00Z</lastmod>
  </url>
 </urlset>

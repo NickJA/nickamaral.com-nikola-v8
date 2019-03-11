@@ -1,0 +1,22 @@
+<div class="section" id="guide-to-setting-up-my-windows-subsystem-for-linux-environment">
+<h1>Guide to setting up my Windows Subsystem for Linux Environment</h1>
+<p><strong>Last Updated:</strong> March 10, 2019</p>
+<div class="section" id="overview">
+<h2>Overview</h2>
+<p>In this guide, I will document my process to setup a fresh Windows 10 OS with the Windows Subsystem for Linux.
+I will be using Ubuntu as the Linux OS, installed from the app store.  I will be doing my development in Visual Studio Code.
+Also, as part of this guide, I will setup my GitHub account with SSH key.  I reviewed a few guides, but I know this <a class="reference external" href="https://daverupert.com/2018/04/developing-on-windows-with-wsl-and-visual-studio-code/">post</a> by Dave was
+my go to.  Also, <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">these instructions from Microsoft are useful</a>.</p>
+<img alt="/images/wsl_ubuntu_sm.png" src="/images/wsl_ubuntu_sm.png" />
+</div>
+<div class="section" id="enable-windows-windowsoptionalfeature">
+<h2>Enable Windows WindowsOptionalFeature</h2>
+<p>One important dependency is that you are running a more recent windows build, build 16215 or later.  Once you have verified the build,
+open PowerShell as Administrator and run the following:</p>
+<pre class="code PowerShell"><a name="rest_code_a3c8fc105de8499591aac627a5511348-1"></a><span class="nb">Enable-WindowsOptionalFeature</span> <span class="n">-Online</span> <span class="n">-FeatureName</span> <span class="n">Microsoft-Windows-Subsystem-Linux</span>
+</pre></div>
+<div class="section" id="install-ubuntu-from-the-windows-store">
+<h2>Install Ubuntu from the Windows store</h2>
+<p>-Nick</p>
+</div>
+</div>
