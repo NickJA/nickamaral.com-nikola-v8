@@ -53,7 +53,7 @@
 'render_taxonomies:output\\archive.html', (49664, 2142)
 'render_galleries', (45056, 56)
 'render_listings', (45568, 56)
-'sitemap:output\\sitemap.xml', (104448, 1769)
+'sitemap:output\\sitemap.xml', (104448, 1770)
 'copy_assets:output\\assets\\css\\ipython.min.css', (47104, 456)
 'render_posts:cache\\posts\\about.html', (49152, 348)
 'render_taxonomies:output\\2019\\index.html', (82944, 3947)
