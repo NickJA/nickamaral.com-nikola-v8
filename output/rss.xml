@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>NickAmaral.com</title><link>http://nickamaral.com/</link><description>NickAmaral.com</description><atom:link href="http://nickamaral.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2019 &lt;a href="mailto:nicholas.amaral@gmail.com"&gt;Nick Amaral&lt;/a&gt; </copyright><lastBuildDate>Mon, 11 Mar 2019 02:11:23 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Personal Data Backup Strategy</title><link>http://nickamaral.com/posts/personal-data-backup-strategy/</link><dc:creator>Nick Amaral</dc:creator><description>&lt;div class="section" id="backup-research-for-post"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>NickAmaral.com</title><link>http://nickamaral.com/</link><description>NickAmaral.com</description><atom:link href="http://nickamaral.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2019 &lt;a href="mailto:nicholas.amaral@gmail.com"&gt;Nick Amaral&lt;/a&gt; </copyright><lastBuildDate>Wed, 13 Mar 2019 23:30:56 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Personal Data Backup Strategy</title><link>http://nickamaral.com/posts/personal-data-backup-strategy/</link><dc:creator>Nick Amaral</dc:creator><description>&lt;div class="section" id="backup-research-for-post"&gt;
 &lt;h2&gt;Backup Research for Post&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Last Updated:&lt;/strong&gt; March 10, 2019&lt;/p&gt;
 &lt;div class="section" id="overview"&gt;
@@ -13,8 +13,9 @@ with a one for one backup to another physical drive in the same server,
 an offsite backup at a family members 10 miles away, and a cloud backup
 to Google Drive.&lt;/p&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;Code - All code will be created primarily on Windows within my OneDrive folder.  OneDrive will be synched across my devices and the cloud.  This will also be backedup with all other irreplaceable data according to my 1,2,3 policy.&lt;/li&gt;
-&lt;li&gt;Photos -&lt;/li&gt;
+&lt;li&gt;Code - All code will be created primarily on Windows within my OneDrive folder.  OneDrive will be synched across my devices and the cloud.  This will also be backed up with all other irreplaceable data according to my 1,2,3 policy.&lt;/li&gt;
+&lt;li&gt;My Photos - Photos from my iPhone are automatically backed up to Google Photos, and synced to a Google Photos folder on my Google Drive.&lt;/li&gt;
+&lt;li&gt;Wife's Photos - My wife organizes her photos separately, uploads them to our home server from her laptop where they are then synced to&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div class="section" id="tools"&gt;
